@@ -1,0 +1,15 @@
+CharName: &myMain
+  ___default: #Used for anyone whose name does not appear below (character specific)
+    - "Default Greeting"
+  Friend: &friend
+    - "Wow"
+    - "Hello"
+    - "Important Message Here"
+  FriendsAlt: *friend #Same greetings as Friend
+
+MyAlt:
+  <<: *myMain #Copy greetings from myMain
+  Friend: #Overwrites previously copied greetings
+    - "Greetings"
+  Person:
+    - "Here's a greeting"
